@@ -1,0 +1,14 @@
+grpc:
+  server:
+    port: 9092
+  client:
+    greeting-service-one:
+      address: 'static://greeting-service-one:9091'
+      negotiation-type: plaintext
+
+spring:
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer

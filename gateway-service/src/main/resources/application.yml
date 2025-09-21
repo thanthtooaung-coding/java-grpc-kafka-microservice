@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+grpc:
+  client:
+    greeting-service-two:
+      address: 'static://greeting-service-two:9092'
+      negotiation-type: plaintext

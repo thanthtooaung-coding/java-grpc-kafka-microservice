@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc.two";
+option java_outer_classname = "GreetingServiceTwoProto";
+
+package greetingtwo;
+
+import "GreetingServiceOne.proto";
+
+service GreetingServiceTwo {
+  rpc sayHello (greetingone.GreetingRequest) returns (greetingone.GreetingResponse);
+}
